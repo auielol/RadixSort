@@ -20,5 +20,3 @@ void radixSort();
 int maxDig();
 int findDig();
 
-
-bool search(int key);

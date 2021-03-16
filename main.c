@@ -63,7 +63,9 @@ int getSelection(int select)
 			}
 		default:
 			{
-				printf("INVALID INPUT");
+				system("cls");
+								
+				printf("\nINVALID INPUT\n");
 				return menu();
 			}
 	}
@@ -217,7 +219,8 @@ int maxDig()
         digit++;
         temp = temp / 10;
     }
-    return(digit);
+    
+    return digit;
 }
 
 int findDig(int number, int k)
@@ -229,29 +232,8 @@ int findDig(int number, int k)
         term = number % 10;
         number = number / 10;
     }
-    return(term);
-}
-
-bool search(int key)
-{
-	int location = 1;
-	
-	struct node *temp = head;
-	
-	while (temp != NULL)
-	{
-		if (temp->data == key)
-		{
-			printf("\nDATA FOUND ON NODE %d\n", location);
-			
-			return true;
-		}
-		
-		temp = temp->next;
-		location++;
-	}
-	
-	return false;
+    
+    return term;
 }
 
 void display()
